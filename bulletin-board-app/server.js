@@ -31,6 +31,7 @@ if ('production' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/api/events', api.events);
+app.get('/api/users',api.users);
 app.post('/api/events', api.event);
 app.delete('/api/events/:eventId', api.event);
 

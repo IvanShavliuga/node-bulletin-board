@@ -5,6 +5,10 @@
   "main": "server.js",
   "author": "iv2, Ivan Shavliuga (Ivanov)",
   "license": "MIT",
+  "scripts": {
+      "dev":"node server.js",
+      "start":"node server.js"
+  },
   "dependencies": {
     "bootstrap": "^3.3.6",
     "ejs": "^2.3.4",

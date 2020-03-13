@@ -31,6 +31,7 @@
             <input class="form-control" placeholder="Title" v-model="event.title">
             <textarea class="form-control" placeholder="Detail" v-model="event.detail"></textarea>
             <input type="date" class="form-control" placeholder="Date" v-model="event.date">
+            <input type="text" class="form-control" placeholder="User" v-model="event.user">
             <button class="btn btn-primary" v-on:click="addEvent">Submit</button>
           </div>
         </div>
@@ -42,6 +43,7 @@
           <h4 class="list-group-item-heading"><i class="glyphicon glyphicon-bullhorn"></i> {{ event.title }}</h4>
           <h5><i class="glyphicon glyphicon-calendar" v-if="event.date"></i> {{ event.date }}</h5>
           <p class="list-group-item-text" v-if="event.detail">{{ event.detail }}</p>
+          <p>{{event.user}}</p>
           <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(event.id)">Delete</button>
         </a>
       </div>

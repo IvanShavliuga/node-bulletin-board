@@ -36,6 +36,17 @@
           </div>
         </div>
       </div>
+      <div class="col-sm-5">
+      <div class="list-group" style="display: flex; flex-direction: row; width:100%">
+        <a href="#" class="list-group-item" v-for="user in users">
+          <h4 class="list-group-item-heading">{{ user.login }}</h4>
+          <h5><i class="glyphicon glyphicon-calendar" v-if="event.date"></i> {{ user.name }}</h5>
+          <!--<p class="list-group-item-text" v-if="event.detail">{{ event.detail }}</p>
+          <p>{{event.user}}</p>
+          <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(event.id)">Delete</button>-->
+        </a>
+      </div>
+    </div>
     </div>
     <div class="col-sm-5">
       <div class="list-group">
@@ -47,6 +58,7 @@
           <button class="btn btn-xs btn-danger" v-on:click="deleteEvent(event.id)">Delete</button>
         </a>
       </div>
+      
     </div>
   </div>
 

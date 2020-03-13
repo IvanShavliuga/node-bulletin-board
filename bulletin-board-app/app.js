@@ -3,11 +3,13 @@ new Vue({
 
   data: {
     event: { title: '', detail: '', date: '', user: '' },
-    events: []
+    events: [],
+    users:[]
   },
 
   ready: function () {
     this.fetchEvents();
+    this.fetchUsers();
   },
 
   methods: {
@@ -20,6 +22,19 @@ new Vue({
           console.log(events);
         })
         .error(function (err) {
+          console.log(err);
+        });
+    },
+
+    fetchUsers: function () {
+      var users = [];
+      this.$http.get('/api/users')
+        .success(function (users) {
+          this.$set('users', users);
+          console.log(users);
+        })
+        .error(function (err) {
+        	 console.log("ERROR: ")
           console.log(err);
         });
     },
